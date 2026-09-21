@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Para ti 🌻</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #fff8df;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .inicio {
+      text-align: center;
+    }
+
+    .inicio h1 {
+      color: #70421f;
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+
+    button {
+      border: none;
+      background: #ffd83d;
+      color: #70421f;
+      padding: 15px 28px;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 5px 12px #d8b84d55;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    .contenido {
+      display: none;
+      text-align: center;
+      animation: aparecer 1.2s ease;
+    }
+
+    .flor {
+      position: relative;
+      width: 180px;
+      height: 300px;
+      margin: auto;
+    }
+
+    /* Pétalos */
+
+    .petalo {
+      position: absolute;
+      width: 55px;
+      height: 100px;
+      background: #ffd83d;
+      border-radius: 50%;
+      top: 20px;
+      left: 62px;
+      transform-origin: 28px 80px;
+    }
+
+    .p1 { transform: rotate(0deg); }
+    .p2 { transform: rotate(45deg); }
+    .p3 { transform: rotate(90deg); }
+    .p4 { transform: rotate(135deg); }
+    .p5 { transform: rotate(180deg); }
+    .p6 { transform: rotate(225deg); }
+    .p7 { transform: rotate(270deg); }
+    .p8 { transform: rotate(315deg); }
+
+    /* Centro */
+
+    .centro {
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      background: #70421f;
+      border-radius: 50%;
+      top: 70px;
+      left: 52px;
+      z-index: 2;
+    }
+
+    /* Tallo */
+
+    .tallo {
+      position: absolute;
+      width: 14px;
+      height: 150px;
+      background: #4d9b45;
+      top: 140px;
+      left: 83px;
+      border-radius: 10px;
+    }
+
+    /* Hoja */
+
+    .hoja {
+      position: absolute;
+      width: 70px;
+      height: 35px;
+      background: #5eaa50;
+      border-radius: 100% 0;
+      top: 205px;
+      left: 25px;
+      transform: rotate(-25deg);
+    }
+
+    .mensaje {
+      color: #70421f;
+      font-size: 22px;
+      line-height: 1.5;
+      padding: 0 25px;
+    }
+
+    .corazon {
+      color: #ef8b8b;
+      font-size: 28px;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Pantalla inicial -->
+
+  <div class="inicio" id="inicio">
+    <h1>Tengo algo para ti...</h1>
+
+    <button onclick="mostrarFlor()">
+      Toca aquí HURLEY 🌻
+    </button>
+  </div>
+
+
+  <!-- Girasol -->
+
+  <div class="contenido" id="contenido">
+
+    <div class="flor">
+
+      <div class="petalo p1"></div>
+      <div class="petalo p2"></div>
+      <div class="petalo p3"></div>
+      <div class="petalo p4"></div>
+      <div class="petalo p5"></div>
+      <div class="petalo p6"></div>
+      <div class="petalo p7"></div>
+      <div class="petalo p8"></div>
+
+      <div class="centro"></div>
+      <div class="tallo"></div>
+      <div class="hoja"></div>
+
+    </div>
+
+    <div class="mensaje">
+      Lo hice especialmente para ti mi niña hermosa🌻
+      <br>
+      <span class="corazon">♡</span>
+    </div>
+
+  </div>
+
+
+  <script>
+    function mostrarFlor() {
+      document.getElementById("inicio").style.display = "none";
+      document.getElementById("contenido").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
